@@ -10,8 +10,8 @@ export function TopBar() {
 
   return (
     <div className="w-full bg-[#1a1a1a] text-white h-10 flex items-center justify-center relative">
-      <p className="text-sm font-medium text-center">
-        Get 25% OFF on your first order | Free shipping above $50
+      <p className="text-xs sm:text-sm font-medium text-center">
+        Get 25% OFF on your first order
       </p>
       <button
         onClick={() => setIsVisible(false)}

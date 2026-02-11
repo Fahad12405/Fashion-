@@ -1,5 +1,11 @@
+'use client'
+
 import { ProductCard } from './ProductCard'
 import products from '@/data/products.json'
+import { SectionHeading } from '@/components/ui/SectionHeading'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 interface ProductGridProps {
   title: string
@@ -8,15 +14,38 @@ interface ProductGridProps {
 
 export function ProductGrid({ title, items }: ProductGridProps) {
   return (
-    <section className="w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-10 sm:mb-12 text-center">
-        {title}
-      </h2>
+    <section className="w-full py-10 sm:py-12 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+      <SectionHeading title={title} subtitle="Premium quality products selected just for you" />
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.1 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-8"
+      >
         {items.map((product) => (
-          <ProductCard key={product.id} {...product} />
+          <motion.div
+            key={product.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <ProductCard {...product} />
+          </motion.div>
         ))}
+      </motion.div>
+
+      {/* View All Link */}
+      <div className="flex justify-end mt-12">
+        <Link
+          href={`/collections/${title.toLowerCase().replace(' ', '-')}`}
+          className="group flex items-center gap-2 text-brand-black hover:text-brand-red font-black uppercase tracking-widest transition-all duration-300"
+        >
+          <span className="text-sm">View All</span>
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
       </div>
     </section>
   )

@@ -1,14 +1,20 @@
 import React from "react"
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Outfit, Cormorant_Garamond } from 'next/font/google'
 
 import './globals.css'
 
-const _geist = Geist({ subsets: ['latin'] })
-const _geistMono = Geist_Mono({ subsets: ['latin'] })
+const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant-garamond',
+  weight: ['300', '400', '500', '600', '700']
+})
 
 export const metadata: Metadata = {
-  title: 'YourStore - Premium Fashion & Apparel',
+  title: 'HustleMob - Premium Fashion & Apparel',
   description:
     'Shop the latest mens and womens fashion including t-shirts, shoes, hoodies, caps and more. Get 25% OFF on your first order!',
   generator: 'v0.app',
@@ -20,6 +26,7 @@ export const metadata: Metadata = {
     'shoes',
     'hoodies',
     'jackets',
+    'HustleMob',
   ],
 }
 
@@ -29,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${outfit.variable} ${cormorant.variable}`}>
+      <body className="font-sans antialiased bg-white text-gray-900">{children}</body>
     </html>
   )
 }

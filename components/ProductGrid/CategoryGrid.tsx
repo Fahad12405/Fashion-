@@ -1,18 +1,33 @@
+'use client'
+
 import { CategoryCard } from './CategoryCard'
 import categories from '@/data/categories.json'
+import { SectionHeading } from '@/components/ui/SectionHeading'
+import { motion } from 'framer-motion'
 
 export function CategoryGrid() {
   return (
-    <section className="w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-10 sm:mb-12 text-center">
-        Shop by Category
-      </h2>
+    <section className="w-full py-10 sm:py-12 px-4 sm:px-6 lg:px-8 mx-auto max-w-4xl">
+      <SectionHeading title="Shop by Category" subtitle="Explore our curated collections across all major categories" />
 
-      <div className="flex flex-wrap justify-center gap-8 sm:gap-10 lg:gap-12">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, staggerChildren: 0.15 }}
+        className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto"
+      >
         {categories.categories.map((category) => (
-          <CategoryCard key={category.id} {...category} />
+          <motion.div
+            key={category.id}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <CategoryCard {...category} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

@@ -6,6 +6,7 @@ import { ProductGrid } from '@/components/ProductGrid/ProductGrid'
 import { FeaturedBanner } from '@/components/FeaturedBanner/FeaturedBanner'
 import { GallerySection } from '@/components/Gallery/GallerySection'
 import { PromoBanner } from '@/components/Banner/PromoBanner'
+import { TestimonialsSection } from '@/components/Testimonials/TestimonialsSection'
 import { Newsletter } from '@/components/Newsletter/Newsletter'
 import { Footer } from '@/components/Footer/Footer'
 import products from '@/data/products.json'
@@ -45,6 +46,9 @@ export default function Home() {
         <section className="bg-white">
           <ProductGrid title="BEST SELLERS" items={products.bestSellers} />
         </section>
+
+        {/* Testimonials */}
+        <TestimonialsSection />
 
         {/* Newsletter */}
         <Newsletter />

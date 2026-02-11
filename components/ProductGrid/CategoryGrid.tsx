@@ -8,7 +8,7 @@ export function CategoryGrid() {
         Shop by Category
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+      <div className="flex flex-wrap justify-center gap-8 sm:gap-10 lg:gap-12">
         {categories.categories.map((category) => (
           <CategoryCard key={category.id} {...category} />
         ))}

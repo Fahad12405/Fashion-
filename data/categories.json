@@ -30,26 +30,31 @@
     },
     {
       "id": 5,
-      "name": "Jackets and Hoodie",
+      "name": "Jackets & Hoodies",
       "slug": "jackets-hoodie",
       "image": "/images/categories/jackets-hoodie.jpg",
       "link": "/category/jackets-hoodie"
     },
     {
       "id": 6,
-      "name": "New Arrivals",
-      "slug": "new-arrivals",
-      "image": "/images/categories/new-arrivals.jpg",
-      "link": "/category/new-arrivals",
-      "badge": "New"
+      "name": "Summer Wear",
+      "slug": "summer-wear",
+      "image": "/images/categories/summer-wear.jpg",
+      "link": "/category/summer-wear"
     },
     {
       "id": 7,
-      "name": "Best Sellers",
-      "slug": "best-sellers",
-      "image": "/images/categories/best-sellers.jpg",
-      "link": "/category/best-sellers",
-      "badge": "Hot"
+      "name": "Winter Wear",
+      "slug": "winter-wear",
+      "image": "/images/categories/winter-wear.jpg",
+      "link": "/category/winter-wear"
+    },
+    {
+      "id": 8,
+      "name": "Casual Wear",
+      "slug": "casual-wear",
+      "image": "/images/categories/casual-wear.jpg",
+      "link": "/category/casual-wear"
     }
   ]
 }

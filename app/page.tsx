@@ -4,6 +4,8 @@ import { HeroBanner } from '@/components/Hero/HeroBanner'
 import { CategoryGrid } from '@/components/ProductGrid/CategoryGrid'
 import { ProductGrid } from '@/components/ProductGrid/ProductGrid'
 import { FeaturedBanner } from '@/components/FeaturedBanner/FeaturedBanner'
+import { GallerySection } from '@/components/Gallery/GallerySection'
+import { PromoBanner } from '@/components/Banner/PromoBanner'
 import { Newsletter } from '@/components/Newsletter/Newsletter'
 import { Footer } from '@/components/Footer/Footer'
 import products from '@/data/products.json'
@@ -23,13 +25,19 @@ export default function Home() {
         {/* Category Grid */}
         <CategoryGrid />
 
+        {/* Promo Banner */}
+        <PromoBanner />
+
         {/* New Arrivals */}
         <section className="bg-gray-50">
           <ProductGrid title="NEW ARRIVALS" items={products.newArrivals} />
         </section>
 
+        {/* Gallery Section */}
+        <GallerySection />
+
         {/* Featured Banner */}
-        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-7xl mx-auto w-full">
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-7xl mx-auto w-full bg-gray-50">
           <FeaturedBanner />
         </section>
 

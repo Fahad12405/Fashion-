@@ -1,0 +1,55 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men's T-shirt",
+      "slug": "mens-tshirt",
+      "image": "/images/categories/mens-tshirt.jpg",
+      "link": "/category/mens-tshirt"
+    },
+    {
+      "id": 2,
+      "name": "Women's T-shirt",
+      "slug": "womens-tshirt",
+      "image": "/images/categories/womens-tshirt.jpg",
+      "link": "/category/womens-tshirt"
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "slug": "shoes",
+      "image": "/images/categories/shoes.jpg",
+      "link": "/category/shoes"
+    },
+    {
+      "id": 4,
+      "name": "Cap",
+      "slug": "cap",
+      "image": "/images/categories/cap.jpg",
+      "link": "/category/cap"
+    },
+    {
+      "id": 5,
+      "name": "Jackets and Hoodie",
+      "slug": "jackets-hoodie",
+      "image": "/images/categories/jackets-hoodie.jpg",
+      "link": "/category/jackets-hoodie"
+    },
+    {
+      "id": 6,
+      "name": "New Arrivals",
+      "slug": "new-arrivals",
+      "image": "/images/categories/new-arrivals.jpg",
+      "link": "/category/new-arrivals",
+      "badge": "New"
+    },
+    {
+      "id": 7,
+      "name": "Best Sellers",
+      "slug": "best-sellers",
+      "image": "/images/categories/best-sellers.jpg",
+      "link": "/category/best-sellers",
+      "badge": "Hot"
+    }
+  ]
+}

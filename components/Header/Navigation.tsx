@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Search, ShoppingCart, User, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const navigationItems = [
   { name: "Men's T-shirt", href: '#mens-tshirt' },
@@ -23,9 +24,17 @@ export function Navigation() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-black">YourStore</h1>
+          <Link href="/" className="flex-shrink-0 flex items-center">
+            <Image
+              src="/logo.png" // apni image ka path yahan dein
+              alt="YourStore Logo"
+              width={140}
+              height={40}
+              priority
+              className="h-8 sm:h-12 w-auto object-cover "
+            />
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">

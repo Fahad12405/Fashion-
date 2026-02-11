@@ -4,57 +4,43 @@
       "id": 1,
       "name": "Men's T-shirt",
       "slug": "mens-tshirt",
-      "image": "/images/categories/mens-tshirt.jpg",
+      "image": "/ProductImages/33.jpg",
       "link": "/category/mens-tshirt"
     },
     {
       "id": 2,
       "name": "Women's T-shirt",
       "slug": "womens-tshirt",
-      "image": "/images/categories/womens-tshirt.jpg",
+      "image": "/ProductImages/85.png",
       "link": "/category/womens-tshirt"
     },
     {
       "id": 3,
       "name": "Shoes",
       "slug": "shoes",
-      "image": "/images/categories/shoes.jpg",
+      "image": "/ProductImages/44.jpg",
       "link": "/category/shoes"
     },
     {
       "id": 4,
       "name": "Cap",
       "slug": "cap",
-      "image": "/images/categories/cap.jpg",
+      "image": "/ProductImages/54.jpg",
       "link": "/category/cap"
     },
     {
       "id": 5,
-      "name": "Jackets & Hoodies",
+      "name": "Hoodies",
       "slug": "jackets-hoodie",
-      "image": "/images/categories/jackets-hoodie.jpg",
+      "image": "/ProductImages/68.jpg",
       "link": "/category/jackets-hoodie"
     },
     {
       "id": 6,
-      "name": "Summer Wear",
-      "slug": "summer-wear",
-      "image": "/images/categories/summer-wear.jpg",
-      "link": "/category/summer-wear"
-    },
-    {
-      "id": 7,
-      "name": "Winter Wear",
-      "slug": "winter-wear",
-      "image": "/images/categories/winter-wear.jpg",
-      "link": "/category/winter-wear"
-    },
-    {
-      "id": 8,
-      "name": "Casual Wear",
-      "slug": "casual-wear",
-      "image": "/images/categories/casual-wear.jpg",
-      "link": "/category/casual-wear"
+      "name": "Jackets",
+      "slug": "jackets",
+      "image": "/ProductImages/81.jpg",
+      "link": "/category/jackets"
     }
   ]
 }

@@ -8,8 +8,11 @@ import { GallerySection } from '@/components/Gallery/GallerySection'
 import { PromoBanner } from '@/components/Banner/PromoBanner'
 import { ShirtsCollection } from '@/components/Collections/ShirtsCollection'
 import { AccessoriesCollection } from '@/components/Collections/AccessoriesCollection'
+import { BundlesCombo } from '@/components/Collections/BundlesCombo'
+import { TestimonialsSection } from '@/components/Testimonials/TestimonialsSection'
 import { Newsletter } from '@/components/Newsletter/Newsletter'
 import { Footer } from '@/components/Footer/Footer'
+import { ScrollToTop } from '@/components/ScrollToTop'
 import products from '@/data/products.json'
 
 export default function Home() {
@@ -28,7 +31,7 @@ export default function Home() {
         <CategoryGrid />
 
         {/* Promo Banner */}
-        <PromoBanner />
+        {/* <PromoBanner /> */}
 
         {/* New Arrivals */}
         <section className="bg-gray-50">
@@ -39,7 +42,7 @@ export default function Home() {
         <GallerySection />
 
         {/* Featured Banner */}
-        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 max-w-7xl mx-auto w-full bg-gray-50">
+        <section className="w-full py-10 sm:py-12 lg:py-16 bg-gray-50 overflow-hidden">
           <FeaturedBanner />
         </section>
 
@@ -48,11 +51,17 @@ export default function Home() {
           <ProductGrid title="BEST SELLERS" items={products.bestSellers} />
         </section>
 
+        {/* Bundles Combo */}
+        <BundlesCombo />
+
         {/* Shirts Collection */}
         <ShirtsCollection />
 
         {/* Accessories Collection */}
         <AccessoriesCollection />
+
+        {/* Client Reviews */}
+        <TestimonialsSection />
 
         {/* Newsletter */}
         <Newsletter />
@@ -60,6 +69,7 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

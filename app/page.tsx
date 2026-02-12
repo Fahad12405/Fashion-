@@ -10,6 +10,7 @@ import { ShirtsCollection } from '@/components/Collections/ShirtsCollection'
 import { AccessoriesCollection } from '@/components/Collections/AccessoriesCollection'
 import { BundlesCombo } from '@/components/Collections/BundlesCombo'
 import { TestimonialsSection } from '@/components/Testimonials/TestimonialsSection'
+import { BlogSection } from '@/components/Blog/BlogSection'
 import { Newsletter } from '@/components/Newsletter/Newsletter'
 import { Footer } from '@/components/Footer/Footer'
 import { ScrollToTop } from '@/components/ScrollToTop'
@@ -62,6 +63,9 @@ export default function Home() {
 
         {/* Client Reviews */}
         <TestimonialsSection />
+
+        {/* Latest Blog Updates */}
+        <BlogSection />
 
         {/* Newsletter */}
         <Newsletter />

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { ProductCarousel } from '@/components/ui/ProductCarousel'
 
 const shirtsProducts = [
   {
@@ -49,13 +50,7 @@ export function ShirtsCollection() {
         <SectionHeading title="Shirts Collection" subtitle="Premium quality shirts for every occasion" />
 
         {/* Products Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
+        <ProductCarousel>
           {shirtsProducts.map((product) => (
             <motion.div
               key={product.id}
@@ -73,7 +68,7 @@ export function ShirtsCollection() {
               />
             </motion.div>
           ))}
-        </motion.div>
+        </ProductCarousel>
 
         {/* View All Link */}
         <div className="flex justify-end mt-12">

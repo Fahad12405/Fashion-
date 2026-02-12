@@ -23,32 +23,30 @@ export function ProductCard({
   rating,
 }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-[2.5rem] p-3 border border-gray-100 hover:shadow-xl transition-all duration-500 group">
+    <div className="bg-white rounded-[1.5rem] sm:rounded-[2.5rem] p-2 sm:p-3 border border-gray-200 hover:shadow-xl transition-all duration-500 group">
       {/* Image Container */}
-      <div className="relative overflow-hidden  rounded-[2rem] aspect-square flex items-center justify-center p-6">
+      <div className="relative overflow-hidden rounded-[1rem] sm:rounded-[2rem] aspect-square flex items-center justify-center p-2 sm:p-6">
         <Image
           src={image || "/placeholder.svg"}
           alt={name}
           fill
-          className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+          className="object-contain p-2 sm:p-4 group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
 
         {/* Badges & Icons */}
         <div className="absolute inset-x-3 top-3 flex justify-between items-start">
           {badge ? (
-            <div className="bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-[11px] font-bold text-gray-700 shadow-sm border border-black/5">
+            <div className="bg-white/80 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[11px] font-bold text-gray-700 shadow-sm border border-black/5">
               {badge}
             </div>
           ) : (
-            <div className="bg-white/80 backdrop-blur-sm px-4 py-1.5 rounded-full text-[11px] font-bold text-gray-700 shadow-sm border border-black/5">
+            <div className="bg-white/80 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[11px] font-bold text-gray-700 shadow-sm border border-black/5">
               Best Seller
             </div>
           )}
 
-          <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300">
-            <Heart className="w-5 h-5 text-red-500 fill-red-500" />
-          </button>
+         
         </div>
 
         {/* Pagination Dots (Static for now as per design) */}
@@ -60,21 +58,21 @@ export function ProductCard({
       </div>
 
       {/* Content */}
-      <div className="mt-5 px-2 pb-2">
+      <div className="mt-3 sm:mt-5 px-1 sm:px-2 pb-1 sm:pb-2">
         {category && (
-          <p className="text-brand-red text-sm font-bold uppercase tracking-widest mb-1">
+          <p className="text-brand-red text-[10px] sm:text-sm font-bold uppercase tracking-widest mb-0.5 sm:mb-1">
             {category.charAt(0).toUpperCase() + category.slice(1).replace('-', ' ')}
           </p>
         )}
-        <h3 className="font-heading font-semibold text-[#1A1A1A] text-base leading-tight mb-2 line-clamp-1">
+        <h3 className="font-heading font-semibold text-[#1A1A1A] text-xs sm:text-base leading-tight mb-1 sm:mb-2 line-clamp-1">
           {name}
         </h3>
 
         {/* Price */}
-        <div className="flex items-center gap-3 mb-5">
-          <span className="text-xl font-bold text-[#1A1A1A]">${price}</span>
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-5">
+          <span className="text-sm sm:text-xl font-bold text-[#1A1A1A]">${price}</span>
           {originalPrice && (
-            <span className="text-sm text-gray-400 line-through">
+            <span className="text-[10px] sm:text-sm text-gray-400 line-through">
               ${originalPrice}
             </span>
           )}
@@ -82,7 +80,7 @@ export function ProductCard({
 
         {/* Buy Now Button */}
         <Button
-          className="w-full bg-[#2B2B2B] hover:bg-black text-white font-bold py-4 sm:py-6 text-sm sm:text-base rounded-full transition-all duration-300 active:scale-95 shadow-lg group-hover:shadow-[#00000033]"
+          className="w-full bg-[#2B2B2B] hover:bg-black text-white font-bold py-2 sm:py-6 text-[9px] sm:text-base rounded-full transition-all duration-300 active:scale-95 shadow-lg group-hover:shadow-[#00000033]"
         >
           Buy Now
         </Button>

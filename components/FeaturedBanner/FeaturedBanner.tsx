@@ -5,27 +5,27 @@ export function FeaturedBanner() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Background */}
-      <div className="relative w-full h-[130px] sm:h-[260px] lg:h-[440px]">
+      <div className="relative w-full h-[110px] sm:h-[260px] lg:h-[440px]">
         {/* Mobile Image */}
         <div className="w-full flex justify-center">
           <Image
-            src="/ProductImages/42.png"
+            src="/ProductImages/95.png"
             alt="hero"
             width={600}
             height={600}
-            className="w-[100%] sm:w-[100%] md:w-[600px] h-auto"
+            className="w-[100%] sm:w-[100%] md:w-[600px] h-auto object-contain "
           />
         </div>
 
 
         {/* Desktop Image */}
         <Image
-          src="/ProductImages/41.png"
+          src="/ProductImages/95.png"
           alt="Jackets & Hoodies Collection"
           fill
           priority
           sizes="100vw"
-          className="object-cover hidden lg:block"
+          className="object-contain hidden lg:block"
         />
       </div>
 

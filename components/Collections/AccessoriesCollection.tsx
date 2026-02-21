@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { ProductCarousel } from '@/components/ui/ProductCarousel'
 
 const accessoriesProducts = [
   {
@@ -49,13 +50,7 @@ export function AccessoriesCollection() {
         <SectionHeading title="Accessories & More" subtitle="Complete your look with our premium quality handpicked accessories" />
 
         {/* Products Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.1 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-        >
+        <ProductCarousel>
           {accessoriesProducts.map((product) => (
             <motion.div
               key={product.id}
@@ -73,7 +68,7 @@ export function AccessoriesCollection() {
               />
             </motion.div>
           ))}
-        </motion.div>
+        </ProductCarousel>
 
         {/* View All Link */}
         <div className="flex justify-end mt-12">

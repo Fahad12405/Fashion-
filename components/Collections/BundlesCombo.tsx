@@ -9,6 +9,7 @@ import { ShoppingCart, Star, Heart, ArrowRight } from 'lucide-react'
 import products from '@/data/products.json'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { motion } from 'framer-motion'
+import { ProductCarousel } from '@/components/ui/ProductCarousel'
 
 export function BundlesCombo() {
     const bundleItems = products.bundles || []
@@ -19,13 +20,7 @@ export function BundlesCombo() {
                 <SectionHeading title="Bundles Combo" subtitle="Save more with our exclusive curated bundles" />
 
                 {/* Bundles Row */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ staggerChildren: 0.1 }}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
-                >
+                <ProductCarousel>
                     {bundleItems.map((bundle) => (
                         <motion.div
                             key={bundle.id}
@@ -33,25 +28,25 @@ export function BundlesCombo() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="group bg-white rounded-[2.5rem] p-4 border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+                            className="group bg-white rounded-[1.5rem] sm:rounded-[2.5rem] p-3 sm:p-4 border border-gray-100 hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
                         >
                             {/* Image Container */}
-                            <div className="relative overflow-hidden brounded-[2rem] aspect-square flex items-center justify-center p-8 ">
+                            <div className="relative overflow-hidden rounded-[1rem] sm:rounded-[2rem] aspect-square flex items-center justify-center p-4 sm:p-8 ">
                                 <Image
                                     src={bundle.image || "/placeholder.svg"}
                                     alt={bundle.name}
                                     fill
-                                    className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
+                                    className="object-contain p-4 sm:p-6 group-hover:scale-110 transition-transform duration-700"
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                 />
 
                                 {/* Badges & Icons */}
                                 <div className="absolute inset-x-4 top-4 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[11px] font-black text-brand-red shadow-sm border border-red-50 uppercase tracking-widest">
+                                    <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-1.5 rounded-full text-[9px] sm:text-[11px] font-black text-brand-red shadow-sm border border-red-50 uppercase tracking-widest">
                                         {bundle.badge || 'Bundle Pack'}
                                     </div>
-                                    <button className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300">
-                                        <Heart className="w-5 h-5 text-red-500 fill-red-500" />
+                                    <button className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-300">
+                                        <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 fill-red-500" />
                                     </button>
                                 </div>
 
@@ -64,11 +59,11 @@ export function BundlesCombo() {
                             </div>
 
                             {/* Content */}
-                            <div className="mt-6 px-2 flex flex-col flex-grow">
-                                <p className="text-brand-red text-sm font-black uppercase tracking-widest mb-2">
+                            <div className="mt-4 sm:mt-6 px-1 sm:px-2 flex flex-col flex-grow">
+                                <p className="text-brand-red text-[10px] sm:text-sm font-black uppercase tracking-widest mb-1 sm:mb-2">
                                     Exclusive Bundle
                                 </p>
-                                <h3 className="font-heading font-semibold text-[#1A1A1A] text-lg leading-snug mb-3 line-clamp-2">
+                                <h3 className="font-heading font-semibold text-[#1A1A1A] text-xs sm:text-lg leading-snug mb-2 sm:mb-3 line-clamp-2">
                                     {bundle.name}
                                 </h3>
 
@@ -87,20 +82,20 @@ export function BundlesCombo() {
                                     </span>
                                 </div>
 
-                                <div className="mt-auto pt-4">
-                                    <div className="flex items-baseline gap-3 mb-6">
-                                        <span className="text-2xl font-black text-[#1A1A1A]">
+                                <div className="mt-auto pt-2 sm:pt-4">
+                                    <div className="flex items-baseline gap-2 sm:gap-3 mb-4 sm:mb-6">
+                                        <span className="text-sm sm:text-2xl font-black text-[#1A1A1A]">
                                             ${bundle.price}
                                         </span>
                                         {bundle.originalPrice && (
-                                            <span className="text-base text-gray-400 line-through font-medium">
+                                            <span className="text-[10px] sm:text-base text-gray-400 line-through font-medium">
                                                 ${bundle.originalPrice}
                                             </span>
                                         )}
                                     </div>
 
                                     <Button
-                                        className="w-full bg-brand-black hover:bg-brand-red text-white font-black py-5 sm:py-7 text-sm sm:text-base rounded-full transition-all duration-300 active:scale-95 shadow-lg group-hover:shadow-red-200/50 uppercase tracking-widest"
+                                        className="w-full bg-[#2B2B2B] hover:bg-black text-white font-bold py-2 sm:py-6 text-[9px] sm:text-base rounded-full transition-all duration-300 active:scale-95 shadow-lg group-hover:shadow-[#00000033]"
                                     >
                                         Buy Now
                                     </Button>
@@ -108,7 +103,7 @@ export function BundlesCombo() {
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
+                </ProductCarousel>
 
                 {/* View All Link */}
                 <div className="flex justify-end mt-12">

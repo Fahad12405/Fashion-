@@ -2,45 +2,59 @@
   "categories": [
     {
       "id": 1,
-      "name": "Men's T-shirt",
-      "slug": "mens-tshirt",
+      "name": "Men's shirts",
+      "slug": "mens-shirts",
       "image": "/ProductImages/33.jpg",
-      "link": "/category/mens-tshirt"
+      "link": "/products?category=mens-shirts"
     },
     {
       "id": 2,
-      "name": "Women's T-shirt",
-      "slug": "womens-tshirt",
+      "name": "Women's shirts",
+      "slug": "womens-shirts",
       "image": "/ProductImages/85.png",
-      "link": "/category/womens-tshirt"
+      "link": "/products?category=womens-shirts"
     },
     {
       "id": 3,
       "name": "Shoes",
       "slug": "shoes",
       "image": "/ProductImages/44.jpg",
-      "link": "/category/shoes"
+      "link": "/products?category=shoes"
     },
     {
       "id": 4,
-      "name": "Cap",
-      "slug": "cap",
+      "name": "Caps & Hats",
+      "slug": "caps-hats",
       "image": "/ProductImages/54.jpg",
-      "link": "/category/cap"
+      "link": "/products?category=caps-hats"
     },
     {
       "id": 5,
       "name": "Hoodies",
-      "slug": "jackets-hoodie",
+      "slug": "hoodies",
       "image": "/ProductImages/68.jpg",
-      "link": "/category/jackets-hoodie"
+      "link": "/products?category=hoodies"
     },
     {
       "id": 6,
       "name": "Jackets",
       "slug": "jackets",
       "image": "/ProductImages/81.jpg",
-      "link": "/category/jackets"
+      "link": "/products?category=jackets"
+    },
+    {
+      "id": 7,
+      "name": "Trousers & Shorts",
+      "slug": "trousers-shorts",
+      "image": "/ProductImages/80.jpg",
+      "link": "/products?category=trousers-shorts"
+    },
+    {
+      "id": 8,
+      "name": "Bundles & Combo",
+      "slug": "bundles-combo",
+      "image": "/ProductImages/55.jpg",
+      "link": "/products?category=bundles-combo"
     }
   ]
 }

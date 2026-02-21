@@ -25,7 +25,7 @@ export function ProductCard({
   rating,
 }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-[2rem] p-2.5 border border-gray-100 hover:shadow-xl transition-all duration-500 group">
+ <div className="bg-white rounded-[2rem] p-2.5 border border-gray-100 hover:shadow-xl transition-all duration-500 group">
       <Link href={`/product/${id}`}>
         {/* Image Container */}
         <div className="relative overflow-hidden  rounded-[1.5rem] aspect-square flex items-center justify-center p-4">

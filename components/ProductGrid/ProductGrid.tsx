@@ -6,6 +6,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { ProductCarousel } from '@/components/ui/ProductCarousel'
 
 interface ProductGridProps {
   title: string
@@ -17,13 +18,7 @@ export function ProductGrid({ title, items }: ProductGridProps) {
     <section className="w-full py-10 sm:py-12 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
       <SectionHeading title={title} subtitle="Premium quality products selected just for you" />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ staggerChildren: 0.1 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-8"
-      >
+      <ProductCarousel>
         {items.map((product) => (
           <motion.div
             key={product.id}
@@ -35,7 +30,7 @@ export function ProductGrid({ title, items }: ProductGridProps) {
             <ProductCard {...product} />
           </motion.div>
         ))}
-      </motion.div>
+      </ProductCarousel>
 
       {/* View All Link */}
       <div className="flex justify-end mt-12">

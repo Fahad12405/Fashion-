@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   ],
 }
 
+import { CartSidebar } from "@/components/Cart/CartSidebar"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,7 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} ${outfit.variable} ${cormorant.variable}`}>
-      <body className="font-sans antialiased bg-white text-gray-900">{children}</body>
+      <body className="font-sans antialiased bg-white text-gray-900">
+        {children}
+        <CartSidebar />
+      </body>
     </html>
   )
 }

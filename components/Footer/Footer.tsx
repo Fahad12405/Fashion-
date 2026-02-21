@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="bg-black text-gray-400 py-12 sm:py-16 lg:py-20">
+    <footer className="bg-gray-900 text-gray-400 py-12 sm:py-16 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Quick Links */}
@@ -122,7 +122,7 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <div className="mb-8 text-center text-white">
-            <Image className='mx-auto justify-center' src="/logo.png" alt="Logo" width={140} height={140} />
+           
             <p className="text-sm text-gray-500">
               © 2026 HustleMob. All rights reserved.
             </p>

@@ -6,18 +6,22 @@ import { Search, ShoppingCart, User, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 
+import { useFashionStore } from '@/lib/store'
+
 const navigationItems = [
-  { name: "Men's T-shirt", href: '#mens-tshirt' },
-  { name: "Women's T-shirt", href: '#womens-tshirt' },
-  { name: 'Shoes', href: '#shoes' },
-  { name: 'Cap', href: '#cap' },
-  { name: 'Jackets and Hoodie', href: '#jackets-hoodie' },
-  { name: 'New Arrivals', href: '#new-arrivals' },
-  { name: 'Best Sellers', href: '#best-sellers' },
+  { name: 'Home', href: '/' },
+  { name: 'Products', href: '/products' },
+  { name: "Men's shirts", href: '/products?category=mens-shirts' },
+  { name: "Women's shirts", href: '/products?category=womens-shirts' },
+  { name: 'Shoes', href: '/products?category=shoes' },
+  { name: 'Caps & Hats', href: '/products?category=caps-hats' },
+  { name: 'Hoodies', href: '/products?category=hoodies' },
+  { name: 'Jackets', href: '/products?category=jackets' },
 ]
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const { cart, setCartOpen } = useFashionStore()
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
@@ -26,7 +30,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center">
             <Image
-              src="/logo.png" // apni image ka path yahan dein
+              src="/hutlemoblogo.png" // apni image ka path yahan dein
               alt="YourStore Logo"
               width={140}
               height={40}
@@ -62,11 +66,18 @@ export function Navigation() {
             </div>
 
             {/* Cart */}
-            <Button variant="ghost" size="icon" className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative"
+              onClick={() => setCartOpen(true)}
+            >
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
+              {cart.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold">
+                  {cart.length}
+                </span>
+              )}
             </Button>
 
             {/* Account */}

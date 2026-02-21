@@ -10,7 +10,7 @@ export function HeroBanner() {
     <section className="relative w-full aspect-[16/7] sm:aspect-auto sm:h-[400px] lg:h-[450px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/banner.png"
+        src="/Newbanner.png"
         alt="Hero Banner"
         fill
         priority
